@@ -8,7 +8,6 @@
                     :default-openeds="[1]"
                     router
             >
-                <!--:default-openeds="[1]" 加了这个可以展开导航-->
                 <el-sub-menu index="1" >
                     <template #title>
                         <i class="el-icon-location"></i>

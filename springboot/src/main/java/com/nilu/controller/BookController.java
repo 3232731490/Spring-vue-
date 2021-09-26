@@ -29,8 +29,6 @@ public class BookController {
         BookMapper.insert(book);
         return Result.success();
     }
-
-
     @GetMapping
     public Result<?> findBook(@RequestParam(defaultValue = "1") Integer number,@RequestParam(defaultValue = "10") Integer pagesize ,@RequestParam(defaultValue = "") String search){
         LambdaQueryWrapper<Book> wrapper = Wrappers.<Book>lambdaQuery();
@@ -40,13 +38,11 @@ public class BookController {
         Page<Book> BookPage = BookMapper.selectPage(new Page<>(number, pagesize), wrapper);
         return Result.success(BookPage);
     }
-
     @PutMapping
     public Result<?> updateBook(@RequestBody Book Book){
         BookMapper.updateById(Book);
         return Result.success();
     }
-
     @DeleteMapping("/{id}")
     public Result<?> deleteBook(@PathVariable Long id){
         BookMapper.deleteById(id);

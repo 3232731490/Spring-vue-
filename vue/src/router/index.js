@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import User from '../views/User.vue'
 import Layout from "../layout/Layout";
 import Book from "../views/Book";
 const routes = [
